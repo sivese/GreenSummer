@@ -7,9 +7,10 @@ function Header() {
   const currentPath = location.pathname;
 
   return (
-    <header className="max-w-6xl mx-auto px-8 h-24 flex items-center justify-between">
+    <header className="max-w-6xl mx-auto px-8 h-24 flex items-center">
+      <img src="./favicon1.png" alt="Logo" className="w-18 h-24" />
       <h1 className="text-3xl font-bold text-cyan-500">{siteInfo.siteTitle}</h1>
-      <ul className="flex gap-10">
+      <ul className="flex ml-[30%] gap-10">
         {menuConfig.map((item, idx) => (
           <li key={idx}>
             <Link to={item.path} className={`text-gray-800 hover:text-blue-500 ${currentPath === item.path ? "font-bold" : ""}`}>
