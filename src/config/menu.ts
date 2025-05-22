@@ -4,9 +4,10 @@ export interface MenuItem {
 }
 
 export const menuConfig: MenuItem[] = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/"},
     { name: "Projects", path: "/projects" },
     { name: "Experience", path: "/experience" },
+    { name: "Music", path: "/music" },
     { name: "Contact", path: "/contact" },
     { name: "Blog", path: "/blog" },
 ];
