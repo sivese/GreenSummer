@@ -5,7 +5,7 @@ function BodyLayout({ children }: { children: ReactNode }) {
         <div className="flex justify-center w-full">
             <div className="relative w-full max-w-5xl pt-8 mx-auto">
                 {/* Main Content starts at 15% left */}
-                <main className="relative ml-[18%] mr-[16%] mt-4 leading-loose">
+                <main className="relative ml-[5%] mr-[5%] mt-4 leading-loose">
                     {children}
                 </main>
             </div>
