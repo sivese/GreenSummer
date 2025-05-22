@@ -28,7 +28,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="flex">
+        <div className="grid grid-cols-2 gap-5 pt-30">
           <h3 className="text-1xl font-semibold">My Skills</h3>
           <h2>What I Can Do!</h2>
         </div>
