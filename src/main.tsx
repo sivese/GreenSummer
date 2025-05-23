@@ -5,6 +5,7 @@ import "./index.css";
 import Projects from "./pages/projects";
 import Home from "./pages/home";
 import Experience from "./pages/experience";
+import BgmPlayer from "./components/bgm-player";
 
 /*
     https://react.dev/learn/writing-markup-with-jsx
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
 
 root.render(
     <React.StrictMode>
+        <BgmPlayer />
         <RouterProvider router={router} />
     </React.StrictMode>
 )
