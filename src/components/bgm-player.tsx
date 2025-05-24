@@ -10,52 +10,52 @@ export const BGMContext = createContext<{
     setTrack: (track: string) => void;
 } | null>(null);
 
-function BgmPlayer() {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [isMuted, setIsMuted] = useState(false);
-    const [volume, setVolume] = useState(0.5);
-    const [track, setTrack] = useState('/bgm-wave.mp3');
+type Props = {
+  children: React.ReactNode;
+};
 
-    useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.muted = isMuted;
-        }
-    }, [isMuted]);
+function BgmPlayer({ children }: Props) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isMuted, setIsMuted] = useState(false);
+  const [volume, setVolume] = useState(0.5);
+  const [track, setTrack] = useState('/bgm-wave.mp3');
 
-    useEffect(() => {
-        const audio = new Audio(track);
-        audio.loop = true;
-        audio.volume = volume;
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
 
-        if (!isMuted) {
-            audio.play().catch(console.warn);
-        }
-        audioRef.current = audio;
+  useEffect(() => {
+    const audio = new Audio(track);
+    audio.loop = true;
+    audio.volume = volume;
 
-        return () => {
-            audio.pause();
-            audio.src = '/bgm-wave.mp3';
-        }
-    }, [track]);
+    if (!isMuted) {
+      audio.play().catch(console.warn);
+    }
 
-    useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.volume = volume; // Set volume to 50%
-        }
-    }, [volume]);
+    audioRef.current = audio;
 
-    return (
-        <BGMContext.Provider value={{ 
-            audio: audioRef.current, 
-            isMuted, 
-            setIsMuted, 
-            volume, 
-            setVolume, 
-            track, 
-            setTrack 
-        }}>
-        </BGMContext.Provider>
-    );
+    return () => {
+      audio.pause();
+      audio.src = '';
+    };
+  }, [track]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
+
+  return (
+    <BGMContext.Provider
+      value={{ audio: audioRef.current, isMuted, setIsMuted, volume, setVolume, track, setTrack }}
+    >
+      {children} {/* ✅ This allows controller (and rest of app) to use the context */}
+    </BGMContext.Provider>
+  );
 }
 
 export default BgmPlayer;
