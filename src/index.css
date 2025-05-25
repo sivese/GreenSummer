@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.plus-li::before {
+    content: '+';
+    color: #22c55e; /* Tailwind's green-500 */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.plus-li {
+    position: relative;
+    padding-left: 1.5rem; /* same as pl-6 */
+    list-style: none;
+    align-self: center;
+}

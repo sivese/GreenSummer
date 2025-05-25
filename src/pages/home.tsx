@@ -6,6 +6,27 @@ import homeIntro from "../config/home-contents";
 import HoverTag from "../components/hover-tag";
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
+function MySkills() {
+  return (
+    <div>
+      <h3 className="text-1xl mx-auto font-semibold">My Skills</h3>
+      <div className="grid grid-cols-2 gap-5">
+      </div>
+    </div>
+  )
+}
+
+function WhatICanDo() {
+  return (
+    <div> 
+      <h3 className="text-1xl mx-auto font-semibold">What I Can Do</h3>
+      <div className="grid grid-cols-2 gap-5">
+        <li className="plus-li"> adads</li>
+      </div>
+    </div>
+  )
+}
+
 function Home() {
   useEffect(() => {
     document.title = `${siteInfo.siteTitle} -  Home`;
@@ -29,8 +50,8 @@ function Home() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-5 pt-30">
-          <h3 className="text-1xl font-semibold">My Skills</h3>
-          <h2>What I Can Do!</h2>
+          <MySkills />
+          <WhatICanDo />
         </div>
       </BodyLayout>
     </PageLayout>
