@@ -6,11 +6,24 @@ import homeIntro from "../config/home-contents";
 import HoverTag from "../components/hover-tag";
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
+type Props = {
+  children: React.ReactNode;
+};
+
+function Bullet( { children }: Props ) {
+  return (
+    <li className="flex items-center space-x-2">
+      <span className="text-green-500 font-bold text-xl leading-none">+</span>
+      <span className="font-medium text-gray-800 ">{ children }</span>
+    </li>
+  );
+}
+
 function MySkills() {
   return (
     <div>
-      <h3 className="text-1xl mx-auto font-semibold">My Skills</h3>
-      <div className="grid grid-cols-2 gap-5">
+      <h3 className="text-2xl mx-auto font-semibold">My Skills</h3>
+      <div className="grid grid-cols-2 gap-5 font-bold">
       </div>
     </div>
   )
@@ -19,9 +32,18 @@ function MySkills() {
 function WhatICanDo() {
   return (
     <div> 
-      <h3 className="text-1xl mx-auto font-semibold">What I Can Do</h3>
-      <div className="grid grid-cols-2 gap-5">
-        <li className="plus-li"> adads</li>
+      <h3 className="text-2xl mx-auto font-semibold">What I Can Do</h3>
+      <div className="grid grid-cols-2 gap-1 pt-5">
+        <Bullet>Android Development</Bullet>
+        <Bullet>Desktop App Development</Bullet>
+        <Bullet>Game Development</Bullet>
+        <Bullet>Raw TCP Socket</Bullet>
+        <Bullet>Multi-Threading</Bullet>
+        <Bullet>AWS Cloud Infrastructure</Bullet>
+        <Bullet>Design RESTful API</Bullet>
+        <Bullet>Web Front-End</Bullet>
+        <Bullet>Open Source Custom</Bullet>
+        <Bullet>Performance Optimization</Bullet>
       </div>
     </div>
   )
@@ -49,7 +71,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 pt-30">
+        <div className="grid grid-cols-2 gap-2 pt-30">
           <MySkills />
           <WhatICanDo />
         </div>
