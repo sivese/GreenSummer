@@ -17,7 +17,7 @@ type Props = {
 function BgmPlayer({ children }: Props) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isMuted, setIsMuted] = useState(false);
-  const [volume, setVolume] = useState(0.2);
+  const [volume, setVolume] = useState(1);
   const [track, setTrack] = useState('/bgm-wave.mp3');
 
   useEffect(() => {

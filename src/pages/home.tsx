@@ -4,7 +4,9 @@ import { useEffect } from "react";
 import { siteInfo } from "../config/site-info";
 import homeIntro from "../config/home-contents";
 import HoverTag from "../components/hover-tag";
+
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import { CPP, CSHARP } from "../logos/language-logo";
 
 type Props = {
   children: React.ReactNode;
@@ -19,11 +21,34 @@ function Bullet( { children }: Props ) {
   );
 }
 
-function MySkills() {
+function TechnicalSkills() {
   return (
-    <div>
-      <h3 className="text-2xl mx-auto font-semibold">My Skills</h3>
-      <div className="grid grid-cols-2 gap-5 font-bold">
+    <div className="pt-15 pl-[15%]">
+      <h3 className="text-2xl mx-auto font-semibold">Technical Skills</h3>
+      <h2>Langauges</h2>
+      <div className="flex">
+        <CPP className="w-10 h-10" />
+        <CSHARP className="w-10 h-10" />
+      </div>
+      <h2>Framework/Library</h2>
+      <div className="flex">
+        <CPP className="w-10 h-10" />
+        <CSHARP className="w-10 h-10" />
+      </div>
+      <h2>IDE</h2>
+      <div className="flex">
+        <CPP className="w-10 h-10" />
+        <CSHARP className="w-10 h-10" />
+      </div>
+      <h2>Cloud</h2>
+      <div className="flex">
+        <CPP className="w-10 h-10" />
+        <CSHARP className="w-10 h-10" />
+      </div>
+      <h2>ETC</h2>
+      <div className="flex">
+        <CPP className="w-10 h-10" />
+        <CSHARP className="w-10 h-10" />
       </div>
     </div>
   )
@@ -31,7 +56,7 @@ function MySkills() {
 
 function WhatICanDo() {
   return (
-    <div> 
+    <div className="pt-15 pl-[15%]"> 
       <h3 className="text-2xl mx-auto font-semibold">What I Can Do</h3>
       <div className="grid grid-cols-2 gap-1 pt-5">
         <Bullet>Android Development</Bullet>
@@ -71,10 +96,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-2 pt-30">
-          <MySkills />
-          <WhatICanDo />
-        </div>
+        <WhatICanDo />
+        <TechnicalSkills />
       </BodyLayout>
     </PageLayout>
   );

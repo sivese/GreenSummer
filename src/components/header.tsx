@@ -1,6 +1,7 @@
 import { menuConfig } from "../config/menu";
 import { siteInfo } from "../config/site-info";
 import { useLocation, Link } from "react-router-dom";
+import BgmController from "./bgm-controller";
 
 function Header() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function Header() {
           </li>
         ))}
       </ul>
+      <BgmController className="pl-75"/>
     </header>
   );
 }
