@@ -7,6 +7,7 @@ import HoverTag from "../components/hover-tag";
 
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { CPP, CSHARP } from "../logos/language-logo";
+import SkillBox from "../components/skill-box";
 
 type Props = {
   children: React.ReactNode;
@@ -24,31 +25,30 @@ function Bullet( { children }: Props ) {
 function TechnicalSkills() {
   return (
     <div className="pt-15 pl-[15%]">
-      <h3 className="text-2xl mx-auto font-semibold">Technical Skills</h3>
-      <h2>Langauges</h2>
-      <div className="flex">
-        <CPP className="w-10 h-10" />
-        <CSHARP className="w-10 h-10" />
-      </div>
-      <h2>Framework/Library</h2>
-      <div className="flex">
-        <CPP className="w-10 h-10" />
-        <CSHARP className="w-10 h-10" />
-      </div>
-      <h2>IDE</h2>
-      <div className="flex">
-        <CPP className="w-10 h-10" />
-        <CSHARP className="w-10 h-10" />
-      </div>
-      <h2>Cloud</h2>
-      <div className="flex">
-        <CPP className="w-10 h-10" />
-        <CSHARP className="w-10 h-10" />
-      </div>
-      <h2>ETC</h2>
-      <div className="flex">
-        <CPP className="w-10 h-10" />
-        <CSHARP className="w-10 h-10" />
+      <h3 className="text-2xl mx-auto font-semibold pb-10">Technical Skills</h3>
+      <div className="space-y-10">
+      <SkillBox title="Programming Languages" skills={[
+        { name: "C++", icon: CPP, level: 90 },
+        { name: "C#", icon: CSHARP, level: 80 },
+        { name: "Rust", icon: CSHARP, level: 70 },
+        { name: "Go", icon: CSHARP, level: 60 },
+        { name: "Java", icon: CSHARP, level: 70 },
+        { name: "Python", icon: CSHARP, level: 60 },
+        { name: "JavaScript", icon: CSHARP, level: 50 },
+        { name: "TypeScript", icon: CSHARP, level: 40 },
+      ]} />
+      <SkillBox title="Framework/Library" skills={[
+        { name: "C++", icon: CPP, level: 90 },
+        { name: "C#", icon: CSHARP, level: 80 },
+      ]} />
+      <SkillBox title="DevOps/Cloud" skills={[
+        { name: "C++", icon: CPP, level: 90 },
+        { name: "C#", icon: CSHARP, level: 80 },
+      ]} />
+      <SkillBox title="IDE/Tools" skills={[
+        { name: "C++", icon: CPP, level: 90 },
+        { name: "C#", icon: CSHARP, level: 80 },
+      ]} />
       </div>
     </div>
   )

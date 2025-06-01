@@ -2,9 +2,8 @@
 
 function Footer() {
     return (
-        <div className="bg-gradient-to-r from-white to-[#00ced1] to-[20%] h-300 w-full">
+        <div className="bg-gradient-to from-white via-yellow-200 to-sky-300 h-100 w-full">
             <footer className="flex justify-center items-center h-full">
-                12345
             </footer>
         </div>
     );
