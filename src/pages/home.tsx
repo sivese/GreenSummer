@@ -6,7 +6,7 @@ import homeIntro from "../config/home-contents";
 import HoverTag from "../components/hover-tag";
 
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { CPP, CSHARP } from "../logos/language-logo";
+import { CPP, CSHARP, GO, JAVA, JS, PYTHON, RUST, TS } from "../logos/language-logo";
 import SkillBox from "../components/skill-box";
 
 type Props = {
@@ -28,14 +28,14 @@ function TechnicalSkills() {
       <h3 className="text-2xl mx-auto font-semibold pb-10">Technical Skills</h3>
       <div className="space-y-10">
       <SkillBox title="Programming Languages" skills={[
-        { name: "C++", icon: CPP, level: 90 },
+        { name: "C++", icon: CPP, level: 85 },
         { name: "C#", icon: CSHARP, level: 80 },
-        { name: "Rust", icon: CSHARP, level: 70 },
-        { name: "Go", icon: CSHARP, level: 60 },
-        { name: "Java", icon: CSHARP, level: 70 },
-        { name: "Python", icon: CSHARP, level: 60 },
-        { name: "JavaScript", icon: CSHARP, level: 50 },
-        { name: "TypeScript", icon: CSHARP, level: 40 },
+        { name: "Rust", icon: RUST, level: 75 },
+        { name: "Go", icon: GO, level: 50 },
+        { name: "Java", icon: JAVA, level: 75 },
+        { name: "Python", icon: PYTHON, level: 65 },
+        { name: "JavaScript", icon: JS, level: 55 },
+        { name: "TypeScript", icon: TS, level: 40 },
       ]} />
       <SkillBox title="Framework/Library" skills={[
         { name: "C++", icon: CPP, level: 90 },

@@ -13,9 +13,9 @@ function SkillBox({ title, skills }: { title: string; skills: Skill[] }) {
         {skills.map(({ name, icon: Icon, level }) => (
           <div key={name} className="p-3.5">
             <div className="flex items-center justify-between text-sm mb-1 text-gray-700 dark:text-gray-300">
-              <div className="items-center gap-2">
-                <Icon className="text-xl w-12 h-12" />
-                <span>{name}</span>
+              <div className="items-center text-center gap-2">
+                <Icon className="text-xl w-14 h-14" />
+                <span className="font-semibold">{name}</span>
               </div>
             </div>
             <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
