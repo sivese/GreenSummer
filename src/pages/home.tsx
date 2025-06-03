@@ -6,7 +6,7 @@ import homeIntro from "../config/home-contents";
 import HoverTag from "../components/hover-tag";
 
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { CPP, CSHARP, GO, JAVA, JS, PYTHON, RUST, TS } from "../logos/language-logo";
+import { CPP, CSHARP, CSS, HTML, JAVA, JS, PYTHON, RUST, TS } from "../logos/language-logo";
 import SkillBox from "../components/skill-box";
 
 type Props = {
@@ -31,21 +31,40 @@ function TechnicalSkills() {
         { name: "C++", icon: CPP, level: 85 },
         { name: "C#", icon: CSHARP, level: 80 },
         { name: "Rust", icon: RUST, level: 75 },
-        { name: "Go", icon: GO, level: 50 },
         { name: "Java", icon: JAVA, level: 75 },
         { name: "Python", icon: PYTHON, level: 65 },
         { name: "JavaScript", icon: JS, level: 55 },
         { name: "TypeScript", icon: TS, level: 40 },
+        { name: "CSS", icon: CSS, level: 40 },
+        { name: "HTML", icon: HTML, level: 40 },
       ]} />
       <SkillBox title="Framework/Library" skills={[
-        { name: "C++", icon: CPP, level: 90 },
-        { name: "C#", icon: CSHARP, level: 80 },
+        { name: "SDL", icon: CPP, level: 90 },
+        { name: "QT", icon: CPP, level: 90 },
+        { name: "Juce", icon: CPP, level: 90 },
+        { name: "OpenGL", icon: CPP, level: 90 },
+        { name: "WPF", icon: CSHARP, level: 80 },
+        { name: "Axum", icon: CSHARP, level: 80 },
+        { name: "Tokio", icon: CSHARP, level: 80 },
+        { name: "PyTorch", icon: CSHARP, level: 80 },
+        { name: "Node.JS", icon: CSHARP, level: 80 },
+        { name: "Express", icon: CSHARP, level: 80 },
+        { name: "Three.JS", icon: CSHARP, level: 80 },
+        { name: "WebGL", icon: CSHARP, level: 80 },
+        { name: "WGPU", icon: CSHARP, level: 80 },
+        { name: "WASM", icon: CSHARP, level: 80 },
+        { name: "React", icon: CSHARP, level: 80 },
+        { name: "Tailwind", icon: CSHARP, level: 80 },
       ]} />
       <SkillBox title="DevOps/Cloud" skills={[
         { name: "C++", icon: CPP, level: 90 },
         { name: "C#", icon: CSHARP, level: 80 },
       ]} />
-      <SkillBox title="IDE/Tools" skills={[
+      <SkillBox title="IDE/Tools/OS" skills={[
+        { name: "C++", icon: CPP, level: 90 },
+        { name: "C#", icon: CSHARP, level: 80 },
+      ]} />
+      <SkillBox title="Game Engine" skills={[
         { name: "C++", icon: CPP, level: 90 },
         { name: "C#", icon: CSHARP, level: 80 },
       ]} />

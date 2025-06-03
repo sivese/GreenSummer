@@ -9,7 +9,7 @@ function SkillBox({ title, skills }: { title: string; skills: Skill[] }) {
   return (
     <section className="p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-md max-w-3xl mx-auto">
       <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">{title}</h2>
-      <div className="space-y-4 flex">
+      <div className="space-y-4 flex flex-wrap">
         {skills.map(({ name, icon: Icon, level }) => (
           <div key={name} className="p-3.5">
             <div className="flex items-center justify-between text-sm mb-1 text-gray-700 dark:text-gray-300">
