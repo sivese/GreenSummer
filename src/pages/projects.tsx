@@ -1,7 +1,7 @@
-import BodyLayout from "../layout/body-layout";
 import PageLayout from "../layout/page-layout";
 import { useEffect } from "react";
 import { siteInfo } from "../config/site-info";
+import GalleryLayout from "../layout/gallery-layout";
 
 function Projects() {
   useEffect(() => {
@@ -10,9 +10,9 @@ function Projects() {
 
   return (
     <PageLayout>
-        <BodyLayout>
-            <h1 className="font-medium">Experience Page</h1>
-        </BodyLayout>
+      <GalleryLayout>
+        <img src="/preview/green-summer.jpeg" alt="Green Summer" className="w-full h-48 object-cover mb-4" />
+      </GalleryLayout>
     </PageLayout>
   );
 }
