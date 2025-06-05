@@ -2,6 +2,16 @@ import PageLayout from "../layout/page-layout";
 import { useEffect } from "react";
 import { siteInfo } from "../config/site-info";
 import GalleryLayout from "../layout/gallery-layout";
+import { Route, Routes } from "react-router-dom";
+import GreenSummer from "../projects/green-summer";
+
+function ProjectRoutes() {
+  return (
+    <Routes>
+      <Route path="green-summer" element={<GreenSummer />} />
+    </Routes>
+  );
+}
 
 function Projects() {
   useEffect(() => {
@@ -17,4 +27,5 @@ function Projects() {
   );
 }
 
+export { ProjectRoutes };
 export default Projects;

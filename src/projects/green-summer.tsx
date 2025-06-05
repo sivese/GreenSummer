@@ -1,5 +1,5 @@
 
-function greenSummer() {
+function GreenSummer() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ function greenSummer() {
   );
 }
 
-export default greenSummer;
+export default GreenSummer;
